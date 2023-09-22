@@ -1,0 +1,24 @@
+QUESTION 7: public class CapitalizeFirstAndLast {
+public static void main(String[] args) { 
+String inputStr = "take u forward is awesome";
+
+String result = capitalizeFirstAndLast(inputStr);
+
+System.out.println("Input String: " + inputStr); 
+System.out.println("String after capitalizing first and last characters: " + result); }
+
+public static String capitalizeFirstAndLast(String str) { StringBuilder result = new StringBuilder();
+
+String[] words = str.split(" ");
+
+for (String word : words) { if (word.length() == 0) {
+
+result.append(" "); } else if (word.length() == 1) {
+
+result.append(Character.toUpperCase(word.charAt(0))); } else {
+
+result.append(Character.toUpperCase(word.charAt(0))) .append(word.substring(1, word.length() - 1)) .append(Character.toUpperCase(word.charAt(word.length() - 1))); }
+
+result.append(" "); }
+
+return result.toString().trim(); } }

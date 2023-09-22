@@ -1,0 +1,15 @@
+OUESTION 3: public class RemoveVowels { public static void main(String[] args) { String inputStr = "take u forward";
+
+String result = removeVowels(inputStr);
+
+System.out.println("Input String: " + inputStr); System.out.println("String after removing vowels: " + result); }
+
+public static String removeVowels(String str) { StringBuilder result = new StringBuilder();
+
+str = str.toLowerCase();
+
+for (int i = 0; i < str.length(); i++) { char ch = str.charAt(i);
+
+if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u') { result.append(str.charAt(i)); } }
+
+return result.toString(); } }

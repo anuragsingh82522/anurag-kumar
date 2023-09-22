@@ -1,0 +1,18 @@
+QUESTION 5: public class RemoveNonAlphabets { 
+public static void main(String[] args) { 
+String inputStr = "take12% *&u ^$#forward";
+
+String result = removeNonAlphabets(inputStr);
+
+System.out.println("Input String: " + inputStr);
+System.out.println("String after removing non-alphabet characters: " + result); }
+
+public static String removeNonAlphabets(String str) { StringBuilder result = new StringBuilder();
+
+str = str.toLowerCase();
+
+for (int i = 0; i < str.length(); i++) { char ch = str.charAt(i);
+
+if (ch >= 'a' && ch <= 'z') { result.append(str.charAt(i)); } }
+
+return result.toString(); } }
